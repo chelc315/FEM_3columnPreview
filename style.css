@@ -1,0 +1,154 @@
+/* 
+
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+
+*/
+
+/* ---------------- */
+/* ELEMENT STYLES */
+/* ---------------- */
+
+body {
+    background-color: hsl(0, 0%, 95%);
+    font-size: 15px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    margin: 50px 15px;
+}
+
+section {
+    padding: 50px;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.5em;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.6);
+    line-height: 1.7em;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+}
+
+button {
+    background-color: white;
+    border: 1px solid white;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    padding: 1em 2em;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+button:hover {
+    border: 1px solid white;
+    color: white;
+}
+
+button.orange:hover {
+    background-color: hsl(31, 77%, 52%);
+}
+
+button.darkTeal:hover {
+    background-color: hsl(184, 100%, 22%);
+}
+
+button.darkGreen:hover {
+    background-color: hsl(179, 100%, 13%);
+}
+
+/* ------------ */
+/* CLASS STYLES */
+/* ------------ */
+
+.sedans {
+    grid-area: 1 / 1 / span 1 / span 1;
+    background: hsl(31, 77%, 52%);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.suvs {
+    grid-area: 2 / 1 / span 1 / span 1;
+    background: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    grid-area: 3 / 1 / span 1 / span 1;
+    background: hsl(179, 100%, 13%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.orange {
+    color: hsl(31, 77%, 52%)
+}
+
+.darkTeal {
+    color: hsl(184, 100%, 22%);
+}
+
+.darkGreen {
+    color: hsl(179, 100%, 13%);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 300;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/* ----------------- */
+/* RESPONSIVE DESIGN */
+/* ----------------- */
+
+@media only screen and (min-width: 600px) {
+    main {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        max-height: 500px;
+        max-width: 920px;
+    }
+
+    .sedans {
+        grid-area: 1 / 1 / span 1 / span 1;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+
+    .suvs {
+        grid-area: 1 / 2 / span 1 / span 1;
+    }
+
+    .luxury {
+        grid-area: 1 / 3 / span 1 / span 1;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
